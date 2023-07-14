@@ -18,7 +18,7 @@ def create_account():
         all_field = False
 
         for field in ["username", "tag", "age", "email", "password", "gender"]:
-            if request.form.get(field) is None:
+            if not request.form.get(field):
                 all_field = False
                 break
             all_field = True
@@ -26,7 +26,7 @@ def create_account():
         username = request.form.get("username")
         tag = request.form.get("tag")
 
-        if validate_csrf() and all_field and is_account_available(username, tag):
+        if all_field and validate_csrf() and is_account_available(username, tag):
             return redirect(url_for("auth.account_verification"))
         else:
             return "Invalid form data"
