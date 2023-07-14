@@ -1,0 +1,24 @@
+<div>
+    <h1>This is signup page</h1>
+
+    <form method="post">
+        <input type="hidden" value="{{ csrf_token }}" name="csrf_token">
+
+        Username:
+        <input type="text" placeholder="username..." name="username"> <br>
+
+        tag:
+        <input type="number" min="1000" max="9999" name="tag"> <br>
+
+        Age:
+        <input type="number" min="10" name="age"> <br>
+
+        email:
+        <input type="email" placeholder="enter email.." name="email"> <br>
+
+        password:
+        <input type="password" name="password"> <br>
+
+        <input type="submit" value="Submit"> <br>
+    </form>
+</div>

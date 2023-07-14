@@ -1,3 +1,5 @@
 Planning/
 .idea/
 venv/
+server/populate_database.py
+__pycache__/
