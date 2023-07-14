@@ -17,7 +17,7 @@ def create_account():
     if request.method == "POST":
         all_field = False
 
-        for field in ["username", "tag", "age", "email", "password"]:
+        for field in ["username", "tag", "age", "email", "password", "gender"]:
             if request.form.get(field) is None:
                 all_field = False
                 break
