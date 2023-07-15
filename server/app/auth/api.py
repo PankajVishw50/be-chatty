@@ -26,13 +26,14 @@ def check_availability():
 
     data = is_account_available(username, tag)
 
+
     if data:
         return {
-            "available": False,
+            "available": True,
             "error": None
         }
 
     return {
-        "available": True,
+        "available": False,
         "error": None
     }
