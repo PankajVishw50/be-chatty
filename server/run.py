@@ -7,7 +7,7 @@ import os
 from app import model
 
 # Instance of flask app
-app = create_app("development")
+app = create_app("production")
 
 
 @app.shell_context_processor

@@ -3,6 +3,7 @@ from ..model import *
 
 def is_account_available(username, tag):
     username = username.lower()
+    tag = int(tag)
 
     data = db.session.execute(db.select(Users).filter(Users.username == username, Users.tag == tag)).scalar()
 
